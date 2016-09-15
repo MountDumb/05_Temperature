@@ -8,7 +8,10 @@ namespace _05_Temperature
 {
     internal class Celcius : ITemperature
     {
-
+        public double Convert(double temp)
+        {
+            return (temp - 32) * 5 / 9;
+        }
         
     }
 }

@@ -8,7 +8,11 @@ namespace _05_Temperature
 {
     internal class Fahrenheit : ITemperature 
     {
-     
-        
+
+        public double Convert(double temp)
+        {
+            return (temp * 9 / 5) + 32;
+        }
+
     }
 }
