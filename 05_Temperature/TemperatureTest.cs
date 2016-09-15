@@ -115,6 +115,19 @@ namespace _05_Temperature
             Assert.AreEqual(212, (temp as Fahrenheit).Convert(100));
             Assert.AreEqual(212, temp.Convert(100));
         }
+        [TestMethod]
+        public void PutCelciusAndFahrenheitInSameArrary()
+        {
+            ITemperature[] temp = new ITemperature[2];
+            temp[0] = TemperatureFactory.Get(Unit.Celcius);
+            temp[1] = TemperatureFactory.Get(Unit.Fahrenheit);
+            //Celcius
+            Assert.IsInstanceOfType(temp[0], typeof(Celcius));
+            Assert.IsNotInstanceOfType(temp[0], typeof(Fahrenheit));
+            //Fahrenheit
+            Assert.IsInstanceOfType(temp[1], typeof(Fahrenheit));
+            Assert.IsNotInstanceOfType(temp[1], typeof(Celcius));
+        }
 
     }
 }
