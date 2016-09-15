@@ -33,7 +33,7 @@ namespace _05_Temperature
             Assert.AreEqual(20, Temperature.FahrenheitToCelcius(68));
         }
 
-        //Celcius to Fahrenheit
+        ////Celcius to Fahrenheit
         [TestMethod]
         public void ConvertFreezingTemperatureCTOF()
         {
@@ -55,10 +55,10 @@ namespace _05_Temperature
             Assert.AreEqual(68, Temperature.CelciusToFahrenheit(20));
         }
 
-        //INSTANCE CLASSES
+        ////INSTANCE CLASSES
 
-        //Through properties & constructors
-        
+        ////Through properties & constructors
+
 
         [TestMethod]
         public void CanSaveDataInFahrenheitProperty()
@@ -84,37 +84,37 @@ namespace _05_Temperature
             Assert.AreEqual(20, temp.Fahrenheit);
         }
 
-        //# test-driving bonus:
-        //#
-        //# refactor to call CelciusToFahrenheit and FahrenheitToCelcius from the rest of the object
-        //#
-        //# run *all* the tests during your refactoring, to make sure you did it right
-        //#
+        ////# test-driving bonus:
+        ////#
+        ////# refactor to call CelciusToFahrenheit and FahrenheitToCelcius from the rest of the object
+        ////#
+        ////# run *all* the tests during your refactoring, to make sure you did it right
+        ////#
 
 
-        //Test driven bonus. If you have read about factory methods try solving the problem below
+        ////Test driven bonus. If you have read about factory methods try solving the problem below
 
-        [TestMethod]
-        public void CanBeConstructedViaFactoryMethod()
-        {
-            ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
-            Assert.IsInstanceOfType(temp, typeof(Celcius)); //Pay attention to the order of the parameters in IsInstanceOfType
+        //[TestMethod]
+        //public void CanBeConstructedViaFactoryMethod()
+        //{
+        //    ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
+        //    Assert.IsInstanceOfType(temp, typeof(Celcius)); //Pay attention to the order of the parameters in IsInstanceOfType
 
-        }
-        [TestMethod]
-        public void FactoryMethodCovertsCorrectlyFromFahrenheitToCelcius()
-        {
-            ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
-            Assert.AreEqual(100, (temp as Celcius).Convert(212));
-            Assert.AreEqual(100, temp.Convert(212));
-        }
-        [TestMethod]
-        public void FactoryMethodCovertsCorrectlyFromCelciusToFahrenheit()
-        {
-            ITemperature temp = TemperatureFactory.Get(Unit.Fahrenheit); //Use Enum
-            Assert.AreEqual(212, (temp as Fahrenheit).Convert(100));
-            Assert.AreEqual(212, temp.Convert(100));
-        }
+        //}
+        //[TestMethod]
+        //public void FactoryMethodCovertsCorrectlyFromFahrenheitToCelcius()
+        //{
+        //    ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
+        //    Assert.AreEqual(100, (temp as Celcius).Convert(212));
+        //    Assert.AreEqual(100, temp.Convert(212));
+        //}
+        //[TestMethod]
+        //public void FactoryMethodCovertsCorrectlyFromCelciusToFahrenheit()
+        //{
+        //    ITemperature temp = TemperatureFactory.Get(Unit.Fahrenheit); //Use Enum
+        //    Assert.AreEqual(212, (temp as Fahrenheit).Convert(100));
+        //    Assert.AreEqual(212, temp.Convert(100));
+        //}
 
     }
 }
