@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace _05_Temperature
 {
-    internal class Celcius : ITemperature, IMaster
+    internal class MasterDegree : IMaster
     {
-        public double Convert(double temp)
-        {
-            return (temp - 32) * 5 / 9;
-        }
-
         public string GiveMasterDegree()
         {
-            return "You are now a master";
+            return  "You are now a master";
         }
-
     }
 }

@@ -128,6 +128,28 @@ namespace _05_Temperature
             Assert.IsInstanceOfType(temp[1], typeof(Fahrenheit));
             Assert.IsNotInstanceOfType(temp[1], typeof(Celcius));
         }
+        [TestMethod]
+        public void TryOutDoubleInheritanceWithMasterDegreeAndCelcius()
+        {
+            IMaster[] allmasters = new IMaster[2];
+            allmasters[0] = TemperatureFactory.GiveMasterDegree(Unit.MasterDegree);
+            allmasters[1] = TemperatureFactory.GiveMasterDegree(Unit.Celcius);
+
+            Assert.IsInstanceOfType(allmasters[0], typeof(MasterDegree));
+            Assert.IsNotInstanceOfType(allmasters[0], typeof(Celcius));
+
+            Assert.IsInstanceOfType(allmasters[1], typeof(Celcius));
+            Assert.IsNotInstanceOfType(allmasters[1], typeof(MasterDegree));
+        }
+        [TestMethod]
+        public void CallSharedMethod()
+        {
+            IMaster master = TemperatureFactory.GiveMasterDegree(Unit.MasterDegree);
+            IMaster celciusmaster = TemperatureFactory.GiveMasterDegree(Unit.Celcius);
+            //equal methods, not equal classes
+            Assert.AreEqual(master.GiveMasterDegree(), celciusmaster.GiveMasterDegree());
+            Assert.AreNotEqual(master, celciusmaster);
+        }
 
     }
 }

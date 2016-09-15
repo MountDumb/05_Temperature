@@ -2,7 +2,7 @@
 
 namespace _05_Temperature
 {
-    internal enum Unit {Fahrenheit, Celcius }
+    internal enum Unit {Fahrenheit, Celcius, MasterDegree }
     internal class TemperatureFactory
     {
         internal static ITemperature Get(Unit u)
@@ -18,9 +18,24 @@ namespace _05_Temperature
 
                     ITemperature far = new Fahrenheit();
                     return far;
+                                    
                 default:
                     throw new Exception();
                     
+            }
+        }
+
+        internal static IMaster GiveMasterDegree(Unit u)
+        {
+            if (u == Unit.MasterDegree)
+            {
+                IMaster master = new MasterDegree();
+                return master;
+            }
+            else
+            {
+                IMaster celciusmasterdegree = new Celcius();
+                return celciusmasterdegree;
             }
         }
 

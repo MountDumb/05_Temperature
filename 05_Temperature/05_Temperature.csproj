@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="Celcius.cs" />
     <Compile Include="Fahrenheit.cs" />
+    <Compile Include="IMaster.cs" />
     <Compile Include="ITemperature.cs" />
+    <Compile Include="MasterDegree.cs" />
     <Compile Include="Temperature.cs" />
     <Compile Include="TemperatureFactory.cs" />
     <Compile Include="TemperatureTest.cs" />
