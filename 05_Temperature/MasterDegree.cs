@@ -9,6 +9,7 @@ namespace _05_Temperature
     internal class MasterDegree : IMaster
     {
         //return 22 / 7; 
+        //return pi;
         public string GiveMasterDegree()
         {
             return  "You are now a master";

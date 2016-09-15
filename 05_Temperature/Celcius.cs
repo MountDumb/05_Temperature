@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace _05_Temperature
 {
     //return pi; 
+    //return 22 / 7;
     internal class Celcius : ITemperature, IMaster
     {
         public double Convert(double temp)
