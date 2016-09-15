@@ -8,6 +8,7 @@ namespace _05_Temperature
 {
     internal class MasterDegree : IMaster
     {
+        //return 22 / 7; 
         public string GiveMasterDegree()
         {
             return  "You are now a master";
