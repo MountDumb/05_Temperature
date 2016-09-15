@@ -146,7 +146,7 @@ namespace _05_Temperature
         {
             IMaster master = TemperatureFactory.GiveMasterDegree(Unit.MasterDegree);
             IMaster celciusmaster = TemperatureFactory.GiveMasterDegree(Unit.Celcius);
-            //equal methods, not equal classes
+            //equal methods, not equal class instances.
             Assert.AreEqual(master.GiveMasterDegree(), celciusmaster.GiveMasterDegree());
             Assert.AreNotEqual(master, celciusmaster);
         }
