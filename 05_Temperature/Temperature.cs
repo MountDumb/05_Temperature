@@ -2,10 +2,9 @@
 {
     // Celcius freezes at 0, fahrenheit at 32.
     // Fahrenheit is 5/9 of celsius
-    internal enum Unit {Fahrenheit, Celcius }
-       
+           
 
-    internal class Temperature
+    internal class Temperature 
     {
         //Fields
         private double fahrenheit;

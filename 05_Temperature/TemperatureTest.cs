@@ -94,27 +94,27 @@ namespace _05_Temperature
 
         ////Test driven bonus. If you have read about factory methods try solving the problem below
 
-        //[TestMethod]
-        //public void CanBeConstructedViaFactoryMethod()
-        //{
-        //    ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
-        //    Assert.IsInstanceOfType(temp, typeof(Celcius)); //Pay attention to the order of the parameters in IsInstanceOfType
+        [TestMethod]
+        public void CanBeConstructedViaFactoryMethod()
+        {
+            ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
+            Assert.IsInstanceOfType(temp, typeof(Celcius)); //Pay attention to the order of the parameters in IsInstanceOfType
 
-        //}
-        //[TestMethod]
-        //public void FactoryMethodCovertsCorrectlyFromFahrenheitToCelcius()
-        //{
-        //    ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
-        //    Assert.AreEqual(100, (temp as Celcius).Convert(212));
-        //    Assert.AreEqual(100, temp.Convert(212));
-        //}
-        //[TestMethod]
-        //public void FactoryMethodCovertsCorrectlyFromCelciusToFahrenheit()
-        //{
-        //    ITemperature temp = TemperatureFactory.Get(Unit.Fahrenheit); //Use Enum
-        //    Assert.AreEqual(212, (temp as Fahrenheit).Convert(100));
-        //    Assert.AreEqual(212, temp.Convert(100));
-        //}
+            }
+            //[TestMethod]
+            //public void FactoryMethodCovertsCorrectlyFromFahrenheitToCelcius()
+            //{
+            //    ITemperature temp = TemperatureFactory.Get(Unit.Celcius); //Use Enum
+            //    Assert.AreEqual(100, (temp as Celcius).Convert(212));
+            //    Assert.AreEqual(100, temp.Convert(212));
+            //}
+            //[TestMethod]
+            //public void FactoryMethodCovertsCorrectlyFromCelciusToFahrenheit()
+            //{
+            //    ITemperature temp = TemperatureFactory.Get(Unit.Fahrenheit); //Use Enum
+            //    Assert.AreEqual(212, (temp as Fahrenheit).Convert(100));
+            //    Assert.AreEqual(212, temp.Convert(100));
+            //}
 
-    }
+        }
 }
