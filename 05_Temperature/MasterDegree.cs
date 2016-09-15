@@ -12,7 +12,8 @@ namespace _05_Temperature
         //return pi;
         public string GiveMasterDegree()
         {
-            return  "You are now a master";
+           string master =  "You are now a master";
+           return master;
         }
     }
 }
