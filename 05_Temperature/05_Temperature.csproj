@@ -57,6 +57,7 @@
     <Compile Include="TemperatureFactory.cs" />
     <Compile Include="TemperatureTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

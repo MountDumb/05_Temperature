@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _05_Temperature
 {
-    internal class Fahrenheit : ITemperature 
+    internal class Fahrenheit : Temps, ITemperature 
     {
 
-        public double Convert(double temp)
+        public override double Convert(double temp)
         {
             return (temp * 9 / 5) + 32;
         }

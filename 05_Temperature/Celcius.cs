@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _05_Temperature
 {
-    internal class Celcius : ITemperature
+    internal class Celcius : Temps, ITemperature
     {
-        public double Convert(double temp)
+        public override double Convert(double temp)
         {
             return (temp - 32) * 5 / 9;
         }

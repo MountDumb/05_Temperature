@@ -10,12 +10,15 @@ namespace _05_Temperature
             switch (u)
             {
                 case Unit.Celcius:
-                    
-                    ITemperature cel = new Celcius();
+
+                    Temps celcius = new Celcius();
+                    ITemperature cel = (ITemperature)celcius;
                     return cel;
 
                 case Unit.Fahrenheit:
-                    ITemperature far = new Fahrenheit();
+
+                    Temps fahrenheit = new Fahrenheit();
+                    ITemperature far = (ITemperature)fahrenheit;
                     return far;
                 default:
                     throw new Exception();
